@@ -1,0 +1,37 @@
+# on stocke le premiere nb en mem[20] et mem[30]
+imm ra 5
+imm rb 20
+st ra rb
+imm rb 30
+st ra rb
+
+# on stocke le second nb en mem[21] et mem[31]
+imm ra 3
+imm rb 21
+st ra rb
+imm rb 31
+st ra rb
+
+# mettre mem[32] a 0
+imm ra 0
+imm rb 32
+st ra rb
+
+# while mem[21] != 0
+imm rc 21 
+imm rb 0
+ld ra rc
+
+eq ra rb A
+addi ra ra FF
+st ra rc
+
+imm rb 20
+ld ra rb
+imm rc 32
+ld rb rc
+
+add ra rb   
+st ra rc
+
+eq ra ra F4   # jump back
